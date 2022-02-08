@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 800px;
+            height: 600px;
+            position: relative;
+            top: 100px;
+            left: 200px;
+            border: 2 px solid green;
+            background-color: cornflowerblue;
+        }
+
+        .div2 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: red;
+            border: 1px solid red;
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+
+        }
+
+        .button1{
+            background-color: rosybrown;
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            border-radius: 10px;
+            position: relative;
+            top: 0px;
+            left: 250px;
+        }
+        .better1{
+            background-color: rebeccapurple;
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            border-radius: 10px;
+            position: absolute;
+            top: 50px;
+            left: 0px;
+        }
+        .button3{
+            background-color: rosybrown;
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            border-radius: 10px;
+            position: relative;
+            top: 250px;
+            left: 500px;
+        }.button4  {
+            background-color: rosybrown;
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            border-radius: 10px;
+            position: relative;
+            top: 500px;
+            left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <button  class = "button1"onclick="top_r()">top</button>
+        <button claas = "better1" onclick="left_r()">Left</button>
+        <Button class = "button3" onclick="right_r()">Right</Button>
+        <button  class ="button4"onclick="bottom_r()">Bottom</button>
+    </div>
+    <div class="div2" id="round"></div>
+
+
+    <script>
+        let left = 0
+        let tops = 0
+        function top_r() {
+            tops -= 20;
+            document.getElementById("round").style.top = `${tops}px`;
+
+
+        }
+        function left_r() {
+            left -= 20;
+            document.getElementById("round").style.left = `${left}px`;
+        }
+
+        function right_r() {
+            left += 20;
+            document.getElementById("round").style.left = `${left}px`;
+        }
+
+
+        function bottom_r() {
+            tops += 20;
+            document.getElementById("round").style.top = `${tops}px`;
+
+
+        }
+
+    </script>
+</body>
+
+</html>

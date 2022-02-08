@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: cornflowerblue;" onkeyup="men(event.keyCode)">
+    <h1 align="center" style="margin: 20px; font-size: 100px ;">
+        00:00
+    </h1>
+    <script>
+        let main1 = 0
+         let main2 = 0
+         let t = true;
+
+    function men(tipps) {
+           setInterval(() => {
+                if(t) {
+                    if ( tipps == 13 ){
+                        document.body.children[0].innerHTML = `<h1 >${main2 > 9 ? main2 : "0" + main2}: ${main1 > 9  ? main1 : "0" + main1}</h1>`
+                    main1 == 60 ? main1 = 0 : main1++;
+                    main1 == 60 ? main2 +=1 : main2;
+                }
+                }
+            }, 10) 
+            if ( tipps == 32){
+                    t =  !confirm( "Do you wanna reset it?")
+                    main1 -= 0;
+                    main2 -= 0;
+            } 
+     }       
+
+    </script>
+</body>
+
+</html>

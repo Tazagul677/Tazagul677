@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .maindiv {
+            border: 1 solid black;
+            width: 250px;
+            height: 650px;
+            border-radius: 10px;
+            background-color: black;
+            position: absolute;
+            left: 40%;
+            top: 5%;
+            box-shadow: 0px 0px 10px black;
+        }
+
+        .minidiv1 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid gray;
+            background-color: gray;
+            border-radius: 50%;
+            box-shadow: 0px 0px 20px gray;
+            margin-top: 12px;
+            margin-left: 22px;
+        }
+    </style>
+</head>
+
+<body style="background-color: lightblue;">
+    <div class="maindiv">
+        <div class="minidiv1" id="green"></div>
+        <div class="minidiv1" id="yellow">
+            <span id="span" style="color: white; position: relative; top: 25%;left: 30%; font-size: 90px;">00</span>
+        </div>
+        <div class="minidiv1" id="red"></div>
+    </div>
+    <script>
+        let green_ = document.getElementById("green")
+        let yel = document.getElementById("yellow")
+        let red_ = document.getElementById("red")
+        let span1 = document.getElementById("span")
+        let num2 = 30
+        let time = true
+        document.body.onkeyup = (e) => {
+            if (e.keyCode == 32) {
+                let set = setInterval(() => {
+                    num2--;
+                    span1.innerText = num2 <= 30 ? num2 : "0" + num2
+                    if (time) {
+                        red_.style.backgroundColor = "red"
+                        red_.style.boxShadow = "0px 0px 10px 7px red"
+                        red_.style.borderColor = "red"
+                    } else {
+                        red_.style.backgroundColor = "gray"
+                        red_.style.boxShadow = "0px 0px 10px 7px gray"
+                        red_.style.borderColor = "gray"
+                    }
+                    if (num2 < 6 && num2 % 2 == 0) {
+                        yel.style.backgroundColor = "yellow"
+                        yel.style.boxShadow = "0px 0px 10px 7px yellow"
+                        yel.style.borderColor = "yellow"
+                    } else {
+                        yel.style.backgroundColor = "gray"
+                        yel.style.boxShadow = "0px 0px 10px 7px gray"
+                        yel.style.borderColor = "gray"
+                    }
+                    if (!time) {
+                        green_.style.backgroundColor = "rgb(50, 243, 11)"
+                        green_.style.boxShadow = "0px 0px 10px 7px rgb(50, 243, 11)"
+                        green_.style.borderColor = "rgb(50, 243, 11)"
+                    } else {
+                        green_.style.backgroundColor = "gray"
+                        green_.style.boxShadow = "0px 0px 10px 7px gray"
+                        green_.style.borderColor = "gray"
+                    }
+                    if (num2 === 0) {
+                        num2 = 30
+                        time = !time
+                    };
+                }, 500);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

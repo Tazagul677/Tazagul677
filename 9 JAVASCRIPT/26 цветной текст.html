@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id=" new1" onclick="press()">Add new item</button>
+    <ul id="new">
+
+    </ul>
+
+
+    <script>
+        // let r = document.getElementById("new1")
+        let color = ["red", "green", "purple", "yellow", "orange"]
+        let y = 0
+        let colors = 0
+        function press(params) {
+            let prompts = prompt("Write any word")
+            if (y == 5) {
+                alert("STOP!")
+                // return;
+
+            }else {
+            document.getElementById("new").innerHTML += `<li style = "background-color:${color[colors]}">${prompts}</li>`
+            colors == color.length ? colors = 0 : colors++;
+            y++;
+            }
+            
+        };
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

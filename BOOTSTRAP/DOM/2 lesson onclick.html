@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button style="background-color: red;" id="btn">скрывать</button>
+   <br>
+    <img id="imgs" src="https://www.wbcsd.org/var/site/storage/images/overview/news-insights/general/news/wbcsd-to-support-the-task-force-on-nature-related-financial-disclosures-tnfd/150706-1-eng-GB/WBCSD-to-support-the-Task-Force-on-Nature-related-Financial-Disclosures-TNFD_opengraph.jpg" alt="">
+</body>
+<script>
+    let but = document.getElementById("btn")
+    let im = document.getElementById("imgs")
+    let t = true
+    but.onclick = function () {
+            t = !t 
+
+        if(t) {
+            but.innerHTML = "скрывать"
+            im.style.display = "block"
+            but.style.backgroundColor = "red"
+
+        } else{
+            im.style.display = "none"
+            but.innerHTML = "показывать"
+            but.style.backgroundColor = "lightgreen"
+
+        }
+    }
+</script>
+</html>

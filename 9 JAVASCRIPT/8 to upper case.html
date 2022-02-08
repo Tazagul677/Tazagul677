@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document6</title>
+</head>
+<body>
+    <script>
+        // let a = "Бул биздин Кыргызстан!"
+        // let b = "Бул биздин Кыргызстан!"
+        // alert(a.toUpperCase())
+        // alert(b.toLowerCase())
+
+
+        let n = prompt("Любой соз жаз!")
+        let m = '';
+       
+        for (let i= 0; i < n.length; i++) {
+            const b = n[i].toUpperCase();
+            if (b =="A"||b =="T" ||  b =="А" || b =="Т"){
+                m += n[i].toUpperCase()
+               
+            } else{
+             m += n[i].toLowerCase() 
+        } 
+        }
+         alert(m);
+
+
+        
+    </script>
+</body>
+</html>

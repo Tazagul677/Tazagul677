@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div" style="position: absolute; top: 50%; left: 50%;color: green;font-size: 100px;">
+
+    </div>
+    <script>
+
+        let div_ = document.getElementById("div")
+        let gg = null;
+        let num = 0
+       function men_() {
+           
+            gg = setInterval(() => {
+                num++
+                div_.innerHTML = num
+            }, 100);
+        }
+        men_();
+        let s = true
+        document.body.onkeydown = (e) => {
+            if (e.keyCode == 32 && s) {
+                s = !s
+                clearInterval(gg)
+            } else if (e.keyCode == 32 && !s) {
+                s = !s
+                men_();
+            }
+        }
+        
+
+// -------------------------------------------------------------------------------------------------------------------------------
+        // let timerId = setInterval(() => {
+        //    alert("trick")
+        // }, 1000);
+
+        // setTimeout(() => {
+        //     clearInterval(timerId);
+        // }, 5000);
+
+    </script>
+</body>
+
+</html>

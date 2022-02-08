@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h1 id="h1_"></h1> -->
+
+    <!-- ------------------------------------------------------------------------------------------ -->
+
+
+    <center>
+        <div style="background-color: gainsboro; width: 500px; height: 200px; border: 1px solid blue;border-radius: 10px; ">
+            <div id="span" style="font-size: 80px;">
+            </div>
+            <button id="t" style="background-color: green;"></button>
+            <button id="f" style="background-color: red;"></button>
+        </div>
+    </center>
+    <script>
+        let div = document.getElementById("span")
+        let text = "Hello world"
+        let index_ = document.getElementsByName("ww")
+        let true_ = document.getElementById("t")
+        let false_ = document.getElementById("f")
+        let true1 = 1
+        let false1 = 1
+        let t = 0
+        for (let i = 0; i < text.length; i++) {
+            div.innerHTML += `<span name = "ww">${text[i]}</span>`
+
+        }
+        document.body.onkeypress = (e) => {
+            let num = index_[t].innerHTML
+            // if()
+            if (e.key.toLocaleUpperCase() == num.toLocaleUpperCase()) {
+                index_[t].style.color = "green"
+                true_.innerHTML = true1++
+
+
+            } else {
+                index_[t].style.color = "red"
+                false_.innerHTML = false1++
+
+            }
+
+            t++
+        }
+
+
+        // ------------------------------------------------------------------------------------------------------------------------------
+        // let h = document.getElementById("h1_")
+        // let text = "Hello World"
+
+        // document.body.onkeydown = (e) => {
+        //     if(e.keyCode == 32 ){
+        //         h.innerHTML = text
+        //     } else{
+        //         h.innerHTML = ""
+        //     }
+           
+        // }
+        // document.body.onkeyup = () =>{
+
+        //     h.innerHTML = ""
+        // }
+    </script>
+</body>
+
+</html>

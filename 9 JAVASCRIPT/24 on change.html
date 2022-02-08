@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="hh" align='center'>
+
+    </div>
+    <input type="text" onchange="men(value)" name = "" placeholder="Name">
+    <input type="text" onchange="mens(value)" name = "" placeholder="Number"> 
+    <button onclick="wal(true)" name="">Check</button>
+    <img src="" alt="" class="tt">
+    <script>
+        let o = document.querySelector(".hh");
+
+        function men(sen) {
+            o.innerText+= "Name -" + sen
+         } function mens(sen) {
+             o. innerText += "  Number -" + sen   
+        }
+        let u = true;
+        function wal(men) {
+            if (u == men) {
+                u = false;
+                document.querySelector(".tt").src = "https://st-1.akipress.org/st_gallery/4/1040604.8ec1f3184bcffc66ef8f0e99e5608cc5.jpg"
+            } else {
+                document.querySelector(".tt").src = "";
+                u = true;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{
+            width: 600px;
+            height: 600px;
+            background-color: aqua;
+            border: 1px solid black;
+            border-radius: 10px;
+            overflow: hidden;
+
+        }
+        .s{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid black;
+            border-radius: 10px; 
+            position: relative;
+            top: 100%;
+            left: 100%;
+            transition: 3s;
+        }
+        .a:hover .s{
+            top: 50%;
+            left: 50%;
+            background-color: blue;
+        }
+        .w{
+            position: relative;
+            top: 50px;
+            left: 900px;
+            font-family: sans-serif;
+            font-size: large;
+            transition: 3s;
+            }
+            .a:hover .w{
+            top: 10%;
+            left: 25%;
+           
+            }
+
+    </style>
+</head>
+<body>
+    <div class="a">
+        <div class="s">
+        </div>
+        <div class="w">
+           <h1> Hello world!</h1>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

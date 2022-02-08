@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .di{
+            position: absolute;
+            left: 40%;
+            top: 10%;
+            border: 1px solid black;
+            width: 380px;
+            height: 400px;
+            border-radius: 10px;
+            background-color: lightgray;
+        }
+
+        .but1 {
+            width: 200px;
+            height: 40px;
+            background-color: lightskyblue;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        .but2 {
+            width: 200px;
+            height: 40px;
+            background-color: lightskyblue;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        input {
+            width: 300px;
+            height: 20px;
+            display: flex;
+            margin: 10px;
+            border-radius: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="maindiv">
+    <p style="text-align: center; color: blue; font-size: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Facebook</p>
+    <div class = "di">
+        <p style="text-align: center;">Log into Facebook</p>
+        <div id="error" style="text-align: center; color: red;"></div>
+      <center> <input type="text" placeholder="Email or phone number" id="input1"></center> 
+       <center><input type="text" placeholder="Password" id="input2"></center> 
+      <center>  <button class="but1" id="but" disabled>Log in</button></center>
+        <p style="text-align: center;">Forgot account</p>
+        <p style="text-align: center;">or</p>
+      <center>  <button class="but2"  id="bu">Create new account</button></center>
+    </div>
+</div>
+<center>    <div style="display: none; color: white; background-color: green; font-size: 50px;" id="wellcome"> Wellcome</div>
+</center>  
+</body>
+<script>
+    let input1 = document.getElementById("input1")
+    let input2 = document.getElementById("input2")
+    let but1 = document.getElementById("but")
+    let well = document.getElementById("wellcome")
+    let main =  document.getElementById("maindiv")
+    let er = document.getElementById("error")
+    let log = "Tazagul"
+    let password = "12345"
+    let t = ""
+    let s = ""
+    but1.onclick = (event) => {
+        if( log == t && password == s){
+            well.style.display = 'block'
+          
+            main.innerHTML = ""
+    
+        } else{
+            er.innerHTML = "Error or wrong login "
+            input1.style.borderColor = "red"
+            input2.style.borderColor = "red"
+        }
+         
+    
+    }
+    input1.oninput = (event) =>{
+        if( input1.value.length > 0 && input2.value.length > 0){
+            but1.disabled = false
+        }
+        t = event.target.value
+    }
+    input2.oninput = (event) =>{
+        if( input1.value.length > 0 && input2.value.length > 0){
+            
+            but1.disabled = false
+        }
+        s = event.target.value
+    } 
+</script>
+</html>

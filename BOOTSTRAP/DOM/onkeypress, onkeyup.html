@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp">
+    <button>ok</button>
+<div id="div"></div>
+
+    <script>
+        let inp = document.getElementById("inp")
+        let di = document.getElementById("div")
+        let enter = ""
+        document.body.onkeypress = (e)=>{
+            console.log(e);
+            if(e.keyCode == 13){
+                document.body.style.backgroundColor = "red" 
+                di.innerHTML = enter
+            console.log("Hi Enter");
+        }else{
+            enter +=e.key
+        }
+        }
+    </script>
+</body>
+</html>

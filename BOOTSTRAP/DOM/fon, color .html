@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: 80px;
+        }
+
+        .but1 {
+            height: 40px;
+            width: auto;
+            border-radius: 10px;
+            background-color: aqua;
+            position: absolute;
+            bottom: 10%;
+            left: 20%;
+        }
+
+        .but2 {
+            height: 40px;
+            width: auto;
+            border-radius: 10px;
+            background-color: aqua;
+            position: absolute;
+            bottom: 10%;
+            right: 20%;
+        }
+
+        .dd {
+            position: absolute;
+            bottom: 25%;
+            left: 45%;
+        }
+    </style>
+</head>
+
+<body id="bod">
+    <div style="text-align: center;">
+
+        <input type="text" class="input1" id="inp">
+        <button id="b1" class="t1">Добавить1</button>
+        <input type="text" class="input2" id=inp1>
+        <button id="b2" class="t2">Добавить2</button>
+    </div>
+    <center>
+        <h1 id="h1" style="color: blue"> Hello DOM </h1>
+    </center>
+    <center>
+        <div class="dd">
+            <button id="max" onclick="add('+')">Увеличить</button>
+            <button id="min"onclick="add('-')">Уменьшить</button>
+        </div>
+    </center>
+    <button id="but" class="but1"></button>
+    <button id="bu" class="but2"></button>
+</body>
+<script>
+    let but1 = document.getElementById("but")
+    let but2 = document.getElementById("bu")
+    let h = document.getElementById("h1")
+    let bo = document.getElementById("bod")
+    let fon = ["cursive", "sans-serif", "Verdana", "Arial"]
+    let color = ["purple", "red", "blue", "orange", "black", "green", "pink", "aqua", "lightgreen", "lightblue"]
+    let t = 0
+    let r = 0
+    let prom = prompt("Write any word")
+
+    let input1 = document.getElementById("inp")
+    let input2 = document.getElementById("inp1")
+    let b3 = document.getElementById("b1")
+    let b4 = document.getElementById("b2")
+    let max1 = document.getElementById("max")
+    let min1 = document.getElementById("min")
+    let p = 80
+    let m = 80
+
+    h.innerHTML = prom
+
+    h.style.fontFamily = `${fon[t]}`
+    but1.innerText = fon[t]
+
+    but1.onclick = () => {
+        //    -----------------------------------------------------------------------------------------------------------------   
+        if (t > fon.length - 2) {
+            t = 0
+        }
+        t++
+        h.style.fontFamily = `${fon[t]}`
+        but1.innerText = fon[t]
+    }
+    bo.style.backgroundColor = `${color[r]}`
+    but2.innerText = color[r]
+    // -------------------------------------------------------------------------------------------------------------
+    but2.onclick = () => {
+        // --------------------------------------------------------------------------------------------------------------------
+        if (r > color.length - 2) {
+            r = 0
+        }
+        r++;
+        bo.style.backgroundColor = `${color[r]}`
+        but2.innerText = color[r]
+    }
+    let y = false;
+
+    b3.onclick = () => {
+        fon.push(input1.value)
+        input1.value = ""
+    }
+    b4.onclick = () => {
+        color.push(input2.value)
+        input2.value = ""
+    }
+
+    let num = 40
+    function add(e = ""){
+        e === "+" ?  num +=10 : num -=10;
+        h.style.fontSize = `${num}px`
+    };
+
+
+
+    // max1.onclick = () => {
+
+    //     if (!y) { p = m }
+    //     y = true;
+    //     h.style.fontSize = `${p += 10}px`
+    //     p++;
+    // }
+
+    // console.log(h.style.fontSize)
+
+    // min1.onclick = () => {
+    //     if (y) { m = p }
+    //     y = false;
+    //     console.log(h.style.fontSize)
+    //     h.style.fontSize = `${m -= 10}px`
+
+    // }
+
+
+</script>
+
+</html>

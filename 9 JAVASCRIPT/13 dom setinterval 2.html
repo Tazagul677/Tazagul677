@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .number{
+         color: white;
+   font-size: 200px; 
+         position: absolute;
+         left: 50%;
+       }
+    </style>
+</head>
+<body>
+   
+   <h1 class="number">
+
+   </h1> 
+   <div>
+
+   </div>
+
+   <script>
+      
+      let text = 10;
+
+
+       setInterval(() => {
+        document.body.children[0].innerHTML = text 
+           let p = document.body.style;
+                if (text<=10 && text>=7) {
+                    p.backgroundColor = "red"
+                } else if (text <= 6 && text >= 4){
+                    p. backgroundColor = "green"
+                 } else if (text <=3 && text >= 1){
+                    p.backgroundColor = " yellow"
+                 } else{
+                    p. backgroundColor = "purple"
+                 }
+               
+            text--;
+            if (text == 0 ) {
+                text = 10; 
+            } 
+        }, 400);
+     
+   </script>
+</body>
+</html>

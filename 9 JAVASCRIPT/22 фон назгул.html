@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+    <style> 
+        button { 
+            background-color: aqua; 
+            font-size: 2rem; 
+            position: absolute; 
+            top: 80%; 
+            margin-left: 160px; 
+            font-family: Comic Sans MS, Comic Sans, cursive; 
+            box-shadow: 0px 0px 19px aqua; 
+            border: none; 
+        } 
+         
+        .n { 
+            margin-left: 80%; 
+        } 
+         
+        h1 { 
+            align-items: center; 
+            justify-content: center; 
+            font-family: Comic Sans MS, Comic Sans, cursive; 
+            text-shadow: 0px 0px 19px aqua; 
+            margin-top: 250px; 
+        } 
+    </style> 
+</head> 
+ 
+<body> 
+ 
+    <h1 align="center"></h1> 
+    <button class="n" onclick="n()">color</button> 
+    <button onclick="na()"> text</button> 
+    <script> 
+        let color = ['red', 'green', 'pink', 'gold'] 
+        let col = 0 
+        let pr = prompt("") 
+ 
+        function n() { 
+            document.body.style.backgroundColor = color[col] 
+            document.body.children[1].innerText = color[col] 
+            col == color.length - 1 ? col = 0 : col++; 
+        } 
+ 
+        let d = document.body.children[0] 
+ 
+        function na() { 
+            document.body.style.color = color[col] 
+            col == color.length - 1 ? col = 0 : col++; 
+        } 
+        d.innerHTML = pr 
+    </script> 
+</body> 
+ 
+</html>

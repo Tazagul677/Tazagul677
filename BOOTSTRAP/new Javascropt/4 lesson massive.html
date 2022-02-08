@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //         let a = 2 + 2;
+
+        // switch (a) {
+        //   case 3:
+        //     alert( 'Маловато' );
+        //     break;
+        //   case 4:
+        //     alert( 'В точку!' );
+        //     break;
+        //   case 5:
+        //     alert( 'Перебор' );
+        //     break;
+        //   default:
+        //     alert( "Нет таких значений" )
+
+        // let friuts = ["apple", "banana", "kiwi","strawberry"];
+        // for ( let i = 0; friuts.length >i; i++){
+        //     alert(friuts[i])
+        // } 
+        // ---------------------------------------------------------------------------------------------------------------------------
+        // let number = [1,200, 2, 3, 4 , 5, 10, 12, 100];   эн чону
+        // let num = 0
+
+        // for( let i = 0;  number.length > i ; i++){     
+        //     // num += number[i]
+        //     if ( num < number[i]){
+        //     num = number[i]
+        //     }
+        // }alert(num)
+
+        // ----------------------------------------------------------------------------------------------------------------------------------
+        //  let number = [8 , 3, 5 ,6, 2 ] эн кичинекейи
+        //  let num = number[1]
+        //  for( let i = 0;  number.length > i ; i++){
+        //      if ( num > number[i]){
+        //         num = number[i]
+        //      }
+        //  }alert(num)
+
+        // ------------------------------------------------------------------------------------------------------------------------
+        // Прибыль
+        // let number = [2, 200, 400, 2000, 500, 1000, 9, 3, 4, 5, 10, 12, 100,];
+        // let num = 0
+        // let num2 = number[0]
+
+        // for (let i = 0; number.length > i; i++) {
+        //     if (num2 >= number[i]) {
+        //         num2 = number[i]
+        //         for (let s = i; s < number.length; s++) {
+        //             if (number[s] > num) {
+        //                 num = number[s]
+        //             }
+        //         }
+        //     }
+        // } if (number[number.length - 1] == num2) {
+        //     num = 0;
+        //     num2 = 0;
+        // }
+        // alert(num - num2)
+        // -----------------------------------------------------------------------------------------------------------------------------
+
+        // // Обьект
+        // let user = {
+        //     name: "Tazagul",
+        //     key: 4,
+        //     number: 085676756,
+        //     11 : 1213,
+        // };alert(`${user['name'] } ${user.number} `)
+
+
+        // let inform = prompt("Write anything")
+        // let massive = [
+        //     {
+        //         name: "Tazagul",
+        //         surname: "Toktorova",
+        //         number: "0773 546 767",
+        //     },
+        //     {
+        //         name: "Farid",
+        //         surname: "Ahmedov",
+        //         number: "0773 442 767",
+        //     },
+        //     {
+        //         name: "Aidanek",
+        //         surname: "Ergasheva",
+        //         number: "0773 237 890",
+        //     },
+        //     {
+        //         name: "Bekbolsun",
+        //         surname: "Mambetov",
+        //         number: "0773 777 777",
+        //     },
+        //     {
+        //         name: "Sultanbek",
+        //         surname: "Abdykadyrov",
+        //         number: "0773 000 000",
+        //     },
+        // ];
+
+        // for( let i = 0; i < massive.length; i++){
+        // console.log((massive[i][inform]))
+        // }
+
+        // --------------------------------------------------------------------------------------------------------
+        // эн чонун по строкам 
+        // let name = '1'
+        // let ho = 0
+        // let men = ["Tazagul", "Farid", "Adilet", "Sultanbek", "Ali", "fghghghghgh", "Farid Ahmedov23243243243"]
+        // for (let i = 0; i < men.length; i++) {
+        //     if (men[i].length > name) {
+        //         name = men[i ].length
+        //         ho = men[i]
+        //     } 
+        // }
+
+        // for(let s = 0 ;  s < ho.length; s++ ){
+        //     console.log(ho[s])
+
+        //  }
+
+        //  -------------------------------------------------------------------------------------------------
+        // по строкам 
+        // console.log(ho [s] +  " "+ name )
+
+        // let name = ["Tazagul",]
+        // for(let i = 0; i < name[0].length - 3; i++){
+        //     console.log(name[0][i])
+        // }
+        // ----------------------------------------------------------------------------------------------------
+        // pin code 
+        // let prompt1 = prompt("Write pin")
+        // let you = [
+        //     {
+        //         pin: "1234",
+        //         price: "300",
+        //     },
+        //     {
+        //         pin: "1111",
+        //         price: "1000",
+        //     }, {
+        //         pin: "2222",
+        //         price: "1234",
+        //     }, {
+        //         pin: "3333",
+        //         price: "1200",
+        //     }, {
+        //         pin: "4444",
+        //         price: "800",
+        //     },
+        // ];
+        // let s = 0;
+
+        // for (let i = 0; i < you.length; i++) {
+        //     if (prompt1 == you[i].pin) {
+
+        //         s = you[i].price
+        //     }
+        // }
+        // if (s > 0) {
+        //     alert(s)
+        // } else {
+        //     alert("Wrong pin , Write again")
+
+        // }
+        
+        // let wanted = 0
+        // let prompt1 = +prompt(" What would you like to buy?")
+        // let fruits = [
+        //     {
+        //         name: "apple, ",
+        //         price: 150,
+        //     },
+        //     {
+        //         name: "pinapple, ",
+        //         price: 200,
+        //     }, {
+        //         name: "apricot, ",
+        //         price: 100,
+        //     }, {
+        //         name: "strawberry, ",
+        //         price: 300,
+        //     }, {
+        //         name: "qiwi, ",
+        //         price: 180,
+        //     },
+        // ];
+
+        // for (let i = 0; i < fruits.length; i++) {
+        //     if (prompt1 > fruits[i].price) {
+        //         prompt1 = prompt1 - fruits[i].price 
+        //        wanted += fruits[i].name
+        // }
+
+      
+        //     }
+            
+        // alert
+        // (" Сиз 1 кг " + wanted + " ала аласыз")
+        // alert ( " Сизде " + prompt1 +  "сом калды ")
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input1{
+            position: absolute;
+            top: 40%;
+            left: 20%;
+        }
+        .input2{
+            position: absolute;
+            top: 40%;
+            right: 20%;
+        }
+         .but1 {
+            height: 100px;
+            width: auto;
+            border-radius: 10px;
+            background-color: aqua;
+            position: absolute;
+            bottom: 40%;
+            left: 20%;
+        }
+
+        .but2 {
+            height: 100px;
+            width: auto;
+            border-radius: 10px;
+            background-color: aqua;
+            position: absolute;
+            bottom: 40%;
+            right: 20%;
+        }
+        .but3{
+            height: 60px;
+            width: 200px;
+            border-radius: 10px;
+            background-color: aqua;
+            position: absolute;
+            bottom: 40%;
+            right: 40%;
+        }
+    </style>
+</head>
+<body id="body1">
+   <center> <div id="div1"></div></center>
+   <div id="div0">Hello HTML</div>
+    <input type="text" id="input1"class= "input1">
+    <input type="text" id="input2" class= "input2">
+    <button id="button1" class = "but1"></button>
+    <button id="button2" class = "but2"> Colorfghgfhgfhgh</button>
+    <button id="but3" class="but3"></button>
+
+</body>
+<script>
+    let bodi = document.getElementById("body1")
+    let div = document.getElementById("div1")
+    let inp1 = document.getElementById("input1")
+    let inp2 = document.getElementById("input2")
+    let but1 = document.getElementById("button1")
+    let but2 = document.getElementById("button2")
+    // let but3 = document.getElementById("but3")
+    // let di = document.getElementById("div0").value
+    let m1 = []
+    let m2 = []
+    but1.onclick =() =>{
+    m1.push(inp1.value)
+    m1.map((m) =>{
+        div.innerHTML = `<div ><h1>${m}</h1></div>`
+        div.style.fontFamily = `${m}`
+    })
+    inp1.value = "";
+};
+but2.onclick = () =>{
+    
+    m2.push(inp2.value)
+    m2.map((h) =>{
+        bodi.style.backgroundColor = `${h}`
+       
+    })
+    inp2.value = "";
+}
+
+// but3.onclick = () => {
+//     console.log(1);
+//     di.style.fontSize = 10 + 'px'
+// };
+
+
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Sign in</h1>
+    <h2>Login :<input type="text" id="h1" value="" placeholder="Name"></h2>
+    <h2>Password : <input type="password" id="h2" value="" placeholder="........""> </h2>
+    <h2><input type="checkbox" id="h3"> Remember me!</h2>
+    <button id="button2">Sign in</button>
+
+
+</body>
+<script>
+    let a = document.getElementById("h1");
+    let b = document.getElementById("h2");
+    let c = document.getElementById("h3");
+    let r = document.getElementById("button2")
+
+
+    r.onclick = () => {
+        if (a.value == "admin" && b.value == "1234") {
+            if (c.checked) {
+                localStorage.setItem("names", a.value)
+                localStorage.setItem("pass", b.value)
+                sessionStorage.clear()
+                alert("Welcome")
+            } else {
+                sessionStorage.setItem("names", a.value)
+                sessionStorage.setItem("pass", b.value)
+                localStorage.clear()
+                
+            }
+        }else{
+            alert("Wrong login or password!")
+        }
+        
+
+    }
+
+
+
+</script>
+
+</html>

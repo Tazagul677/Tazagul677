@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b {
+            /* background-image: url("https://wallup.net/wp-content/uploads/2019/10/309958-spring-flowers-tender-mountains-water.jpg"); */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        input {
+            width: 150px;
+            height: 40px;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: lightgreen;
+            width: 100px;
+            height: 40px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body id="bod" class="b">
+    <input type="text" id="inp">
+    <button id="btn"> Нажми меня</button>
+    <div id="divs">
+
+    </div>
+    <img src="" alt="" id="im">
+</body>
+<script>
+    let int = document.getElementById("inp")
+    let but = document.getElementById("btn")
+    let div1 = document.getElementById("divs")
+    let body1 = document.getElementById("bod")
+    let img = document.getElementById("im")
+    let m = ""
+    let r = true
+
+    but.onclick = (event) => {
+        body1
+        div1.innerHTML = `<div><h1 style = "color : green;" >Сиз  ${m} турдуу кызыл жана кок тустогу фигураларды коруп жатасыз! </h1></div>`
+        body1.style.backgroundImage = `url("https://wallup.net/wp-content/uploads/2019/10/309958-spring-flowers-tender-mountains-water.jpg")`
+        r = !r
+        if (m !== "") {
+            for (let i = 0; i < m; i++) {
+                if (i % 2 == 0) {
+                    div1.innerHTML += `<div style = "width: 200px; height:200px; background-color: red; 
+            border-radius:100%;display: inline-block;border: 2px solid green; margin: 10px;">  </div>`
+                } else {
+                    div1.innerHTML += `<div style = "width: 200px; height:200px; background-color: blue;
+             border-radius:10%;display: inline-block;border: 2px solid green; margin: 10px;"></div>`
+                }
+            }
+            // div1.innerText = ""
+        }if (r) {
+            div1.innerHTML = ""
+            int.value = ""
+        }
+
+    }
+    int.oninput = (event) => {
+        m = event.target.value
+
+    }
+
+</script>
+
+</html>

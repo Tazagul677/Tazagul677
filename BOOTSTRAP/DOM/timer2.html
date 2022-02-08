@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            border: 1px solid black;
+            background-color: blanchedalmond;
+            width: 500px;
+            height: 600px;
+            border-radius: 10px;
+        }
+
+        .input_ {
+            margin-top: 20px;
+            width: 250px;
+            height: 50px;
+        }
+
+        .div2 {
+            position: absolute;
+            top: 30%;
+            left: 45%;
+            border: 1px solid cadetblue;
+            width: 200px;
+            height: 300px;
+            background-color: cadetblue;
+            border-radius: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="main" id="main11" >
+            <center> <input class="input_" type="number" name="" id="inp">
+                <button id="btn1">отправить</button>
+            </center>
+
+            <div class="div2" id="div2">
+                <span style = "font-size: 50px;" id="h">00</span> :
+                <span style = "font-size: 50px;" id="h2">00</span>
+                <br>
+                <button id="btn" style="width: 100px; height: 40px;"> 0 сом</button>
+            </div>
+        </div>
+    </center>
+    <script>
+        let main1_ = document.getElementById("main11")
+        let input = document.getElementById("inp")
+        let h = document.getElementById("h")
+        let h2_ = document.getElementById("h2")
+        let btn = document.getElementById("btn")
+        let div2 = document.getElementById("div2")
+        let btn1_ = document.getElementById("btn1")
+        let value_ = 0
+        let num = 0
+        let span1 = 59
+        let span2 = 0
+        let price = 50
+
+        btn1_.onclick = function add() {
+            value_ = input.value * 6000
+            span2 = input.value -1
+           
+            setTimeout(() => {
+                clearInterval(num)
+            }, value_);
+
+        num = setInterval(() => {
+           
+            span1--
+            h2_.innerHTML = span1 >9 ? span1 : "0" + span1
+            h.innerHTML = span2 > 9 ? span2 : "0" + span2
+
+            if(span1 == 0 && span2 > 0){
+                span2--
+                span1 = 59
+                h.innerHTML = span2 > 9 ? span2 : "0" + span2
+            }else if (span1 == 0 && span2 === 0){
+                    main1_.style.border = '5px solid red'
+            }
+            }, 100);
+
+           btn.innerHTML = `${price * input.value}  сом `
+
+            
+        }
+
+
+
+
+
+
+        
+
+
+
+    </script>
+</body>
+
+</html>

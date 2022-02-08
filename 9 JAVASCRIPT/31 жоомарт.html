@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>list</h1> 
+    <input  id="input" type="text"> 
+    <button id="button">Press me!</button> 
+    <ul></ul> 
+    <script> 
+        let input = document.getElementById('input');  
+        let button = document.getElementsByTagName('button')[0]; 
+        let ul =  document.getElementsByTagName('ul')[0]; 
+        let axa = localStorage.getItem('apaa'); 
+        button.onclick = () =>{ 
+            localStorage.setItem('apaa', axa + '---' + input.value); 
+            ul.innerHTML += '<li>' + input.value + '</li>' 
+            input.value = " " 
+        }  
+        const bus_array = axa.split('---'); 
+        for(let i = 0; i < bus_array.length; i++){ 
+        if (bus_array[i]);  
+        ul.innerHTML += '<li>' + bus_array[i] + '</li>'; 
+        } 
+    </script>
+</body>
+</html>

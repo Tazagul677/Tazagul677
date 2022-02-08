@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="inp">
+    <button id="but">Write any word</button>
+
+    <div id="div1">
+
+    </div>
+    <script>
+        // let div = document.getElementById("div")
+
+        //         let name = ["Ali", "Bekbolsun", "tazagul", "sultanbek", "Farid"]
+
+        //         //       name.map((asan, i) => {
+        //         //       asan === "Bekbolsun" ? console.log(asan + " " +i) : ""
+
+        //         //  }) 
+
+        //         //  let s = name.filter ((e, i ) => i == 3 )
+        //         //  console.log(s)
+        //         // let s = [""]
+        //         // let map1 = name.filter((men, i) => men.length >= 8)
+        //         // console.log(map1);
+
+        // name.push("Adilet")
+        // console.log(name)
+
+
+        let put = document.getElementById("inp")
+        let but1 = document.getElementById("but")
+        let mass = []
+        let div = document.getElementById("div1")
+
+
+        but1.onclick = () => {
+            div.innerHTML =""
+            mass.push(put.value)
+           
+            mass.map((g,y) => {
+                
+                div.innerHTML += `<div> <span>  ${y +1} ${g}</span> </div>`
+            })
+                console.log(mass)    
+                put.value = ""
+            }
+    
+
+
+
+    </script>
+</body>
+
+</html>

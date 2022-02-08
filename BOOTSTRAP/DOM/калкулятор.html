@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .but1 {
+            width: 100px;
+            height: 80px;
+            position: absolute;
+            top: 10px;
+            left: 20%;
+            border-radius: 5px;
+        }
+
+        .but2 {
+            width: 100px;
+            height: 80px;
+            position: absolute;
+            top: 10px;
+            left: 30%;
+            border-radius: 5px;
+        }
+
+        .but3 {
+            width: 100px;
+            height: 80px;
+            position: absolute;
+            top: 10px;
+            left: 40%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="input">
+    <button id="but1" class="but1"> Plus + </button>
+    <button id="but2" class="but2"> Minus - </button>
+    <button id="but3" class="but3"> Equall = </button>
+    <div id="h1"></div>
+
+</body>
+<script>
+    let b1 = document.getElementById("but1")
+    let b2 = document.getElementById("but2")
+    let b3 = document.getElementById("but3")
+    let int = document.getElementById("input")
+    let h = document.getElementById("h1")
+    let oldvalue = ""
+    let newvalue = ""
+    let value2 = null
+    let plus = ""
+
+    b1.onclick = (event) => {
+        value2 = true
+        int.value = ""
+        h.innerHTML = `<div><h1 style = "color: red">  ${oldvalue} </h1> </div>`
+    }
+    b2.onclick = (event) => {
+        int.value = ""
+        value2 = false
+        h.innerHTML = `<div><h1 style = "color: red">  ${oldvalue} </h1> </div>`
+    }
+    b3.onclick = (event) => {
+        let number = value2 ? +oldvalue + +newvalue : +oldvalue - +newvalue
+        h.innerHTML = `<div><h1 style = "color: red">  ${number} </h1> </div>`
+        h.innerHTML = value2 ? ` <div><h1 style = "color: red"> ${oldvalue} + ${newvalue} = ${number} </h1></div>` : `<div><h1 style = "color: red"> ${oldvalue} - ${newvalue} = ${number}</h1> </div>`
+    }
+    int.oninput = (event) => {
+
+        if (value2 !== null) { newvalue = event.target.value } else {
+            oldvalue = event.target.value
+        }
+    }
+
+
+</script>
+
+</html>

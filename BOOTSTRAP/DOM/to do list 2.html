@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            width: 600px;
+            height: 800px;
+            background-color: lightskyblue;
+            position: absolute;
+            top: 5%;
+            left: 40%;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0px 10px 10px black;
+        }
+
+        .minidiv1 {
+            margin-left: 60px;
+            margin-top: 20px;
+        }
+
+        .minidiv2 {
+            margin-left: 60px;
+            margin-top: 50px;
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 500px;
+            height: auto;
+            background-color: blanchedalmond;
+        }
+
+        .btn4 {
+            /* margin-right: 5px;
+            margin-top: 5px; */
+            position: relative;
+            top: 10px;
+            left: 400px;
+        }
+
+        .btn1_ {
+            background-color: green;
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+
+        }
+
+        .btn1_:hover {
+            background-color: honeydew;
+            width: 105px;
+            height: 43px;
+        }
+
+        .btn2_ {
+            background-color: red;
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+
+        }
+
+        .btn2_:hover {
+            background-color: honeydew;
+            width: 105px;
+            height: 43px;
+        }
+
+        .inp1 {
+            width: 300px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body style="background-color: lightblue;">
+    <div class="div1">
+        <div class="minidiv1">
+            <h1 style="margin-left: 40px; font-size: 40px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+            ;">My to do list for Javascript</h1>
+            <input type="text" id="inp1" class="inp1">
+            <button id="btn1" class="btn1_"> Add any word</button>
+            <button id="btn2" class="btn2_">Delete All</button>
+        </div>
+        <div id="div2" class="minidiv2"> </button></div>
+
+    </div>
+    <script>
+        let inp = document.getElementById("inp1")
+        let div2_ = document.getElementById("div2")
+        let btn1_ = document.getElementById("btn1")
+        let btn2_ = document.getElementById("btn2")
+        let btn3_ = document.getElementById("btn3")
+        let mass = []
+
+        btn1_.onclick = () => {
+            div2_.innerHTML = ""
+
+            mass.push(inp.value)
+
+            localStorage.setItem("word", JSON.stringify(mass))
+
+            add()
+        }
+        function add() {
+            let jsget_ = localStorage.getItem("word")
+
+            mass = jsget_ != null ? JSON.parse(jsget_) : []
+            mass.map((r, i) => {
+                div2_.innerHTML += `<div> ${r} <button onclick='gg(${i})' style = "background-color: red; border-radius: 4px;">delete me</button></div>`
+                inp.value = ""
+
+                if (i % 2 == 0) {
+                    i.innerHTML = `<div style = "background-color: green"> ${i} </div>`
+                } else {
+                    i.innerHTML = `<div style = "background-color: purple"> ${i} </div>`
+                }
+            })
+        }
+        function gg(i) {
+            div2_.innerHTML = ''
+            let jsget = localStorage.getItem("word")
+            mass = jsget != null ? JSON.parse(jsget) : []
+            mass.splice(i, 1)
+         
+            add()
+        };
+        add()
+        btn2_.onclick = () => {
+            div2_.innerHTML = ""
+            localStorage.clear()
+        };
+
+
+
+    </script>
+</body>
+
+</html>

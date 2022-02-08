@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cаякат</title>
+    <style>
+        *{
+            margin: 0% ;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0%;
+        }
+      
+        .all {
+          
+            width: 100px;
+            height: 70px;
+          
+        }
+        .car{
+            width: 100%;
+            height: 55px;
+            border-bottom: 1px solid blueviolet;
+            position: relative;
+           
+        }
+        .nll{
+           transform:  translate(900px);
+           transition: 10s;
+        }
+       
+        button{
+            position: absolute;
+            right: 0%;
+            bottom: 10%;
+        }
+      
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://www.cvetyopt.ru/image/cache/catalog/Anna_bouquet/1novogodnee/0934823423_COR_564774883_775849903-800x800.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Малина-Роза</h5>
+
+                        <a href="#" class="btn btn-primary" id="order">Заказать букет цветов</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://www.florastatic.net/floraexpress.ru/img/blog/521/2015-09-07-flora-1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Алое</h5>
+
+                        <a href="#" class="btn btn-primary">Заказать букет цветов</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://by.u-f-l.net/bouquet/nejnyiy_podarok-9873_c16_b.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Африканка</h5>
+
+                        <a href="#" class="btn btn-primary">Заказать букет цветов</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+    <div class="car" >
+    <img id="car" src="https://pngimage.net/wp-content/uploads/2018/06/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0-%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0-png-7.png"
+        alt="" class="all">
+        <button  type="button" class="btn btn-primary btn-sm"style= "display: none" id="but" >Отправляется...</button>
+    </div>
+</div>
+
+    <script>
+       
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+<script>
+    let men = document.getElementById("order")
+    let car = document.getElementById("car")
+    let bu = document.getElementById("but")
+
+    men.onclick = () =>{
+        car.classList.add("nll")
+bu.style.display = "block"
+    }
+</script>
+</html>

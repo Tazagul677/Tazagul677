@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div align = "center">
+        HELLO DOM
+    </div> -->
+    <span style="color: black;">
+        hello html
+    </span>
+
+    <h1>
+
+    </h1>
+   <h1>
+
+
+   </h1>
+    <!-- <h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         In non consectetur tempora quasi dolor provident commodi quisquam, 
+         
+          <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Repudiandae ipsa incidunt aliquam dolorum voluptatibus sapiente dolores a soluta,
+               
+          </p>
+          <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          </p>
+    </h1>
+    <h2>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    </h2> -->
+    <script type="text/javascript">
+
+        // console.dir(document.body.style.div);
+        // document.body.style.backgroundColor = "lightblue"
+        // let color = ["red", "green","blue", "pink", "purple", "yellow", "aqua"]
+        // let i = 0
+        // let ditext = ["blue", "yellow", "aqua","black", "white", "red", "green"]
+       
+       
+        // setInterval(() => {
+        //     document.body.style.backgroundColor = color[i]
+        //     document.body.children[0].style.color = ditext[i]
+        //     document.body.children[0].innerText = "Men Tazagul"
+
+        //     i ++
+        //     if ( i == color.length) {
+        //         i = 0 
+               
+       
+        //     }
+        // }, 1000);
+        // let aler = document.body.children[0].innerText;
+       
+        // alert(aler)
+
+        // ----------------------------------------------------------------------------------------------------
+
+        // МЕН ЖАСАДЫМ 
+        // let a = document.body.children[0].innerText = "<u> DOM </u>"
+        // let c = document.body.children[1].innerHTML = "<u> DOM1 </u>"
+
+        
+        let color2 = ["red","blue","green","aqua","yellow","lightblue"]
+        let g = ["H","e","l","l","o","H","T","M","L"]
+        let d = 0
+        let b = 0
+// --------------------------------------------------------------------------------------------------
+        setInterval(() => {
+      
+        if ( d == g.length ) {
+                d = 0;
+            
+              document.body.children[1].innerHTML= " "
+            }
+        
+            document.body.children[1].innerHTML +=
+             `<span style="color: ${color2[b]}"> 
+                ${b % 2 == 0  ? g[d].toUpperCase () : g[d].toLowerCase()} 
+            </span>`            
+       
+         d++;
+
+         b == 5 ? b = 0 : b++;
+          
+            
+            
+        }, 700);
+
+// -------------------------------------------------------------------------------------------------------------
+         // document.body.children[1].innerHTML += g[d]
+         
+        // document.body.style.color = color2[b]
+
+        // -------------------------------------------------------------------------
+
+        // document.body.children[0].style.color = "red"
+        // document.body.children[1].style.color = "green"
+        // document.body.children[0].children[0].style.color = "purple"
+        // document.body.children[0].children[1].style.color = "yellow"
+        // ------------------------------------------------------------------------------
+
+// АГАЙ ЖАСАДЫ
+        // let index = 0
+        // let text = "Hello I am  Javascript"
+        // setInterval(() => {
+        //    document.body. children[0].innerHTML +=  text[index];
+        //    index ++;
+
+        //    if (index+2 == text.length(0)) {
+        //        index = text.length;
+        //        document.body.children[0].innerHTML = " "
+               
+               
+        //    };
+        // }, 400);
+
+        // --------------------------------------------------------------------------------------------->
+
+
+    </script>
+</body>
+</html>

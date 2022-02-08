@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button1 {
+            position: absolute;
+            left: 400px;
+            bottom: 200px;
+            border: 1px solid black;
+            width: 200px;
+            height: 50px;
+            border-radius: 5px;
+            font-size: 30px;
+            font-family: sans-serif;
+            background-color: red;
+        }
+
+        .button2 {
+            position: absolute;
+            right: 400px;
+            bottom: 200px;
+            border: 1px solid black;
+            width: 200px;
+            height: 50px;
+            border-radius: 5px;
+            font-size: 30px;
+            font-family: sans-serif;
+            background-color: green;
+        }
+
+        .b1 {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body id="body" class="b1">
+    <button id="red" class="button1">Red</button>
+    <button id="blue" class="button2">Green</button>
+    <img src="" alt="">
+
+
+</body>
+<script>
+    let but1 = document.getElementById("red")
+    let but2 = document.getElementById("blue")
+    let bod = document.getElementById("body")
+    but1.onclick = function () {
+        bod.style.backgroundColor = "red"
+        but1.style.backgroundColor = "white "
+        but1.style.color = "red"
+
+    }
+    but2.onclick = function () {
+        bod.style.backgroundColor = "green"
+        but2.style.backgroundColor = "white"
+        but2.style.color = "green"
+    }
+
+
+
+
+    // --------------------------------------------------------------------------------------------------------
+
+    
+</script>
+
+</html>

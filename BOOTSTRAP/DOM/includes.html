@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="inp">
+    <button id="btn">Поиск</button>
+    <br><br>
+    <div style="font-size: 20px; font-weight: 600;" id="div"></div>
+
+
+
+
+    <script>
+        let btn = document.getElementById('btn');
+        let div = document.getElementById('div');
+        let inp = document.getElementById('inp');
+        let array = [{
+            img: 'https://cdn-files.kimovil.com/default/0006/38/thumb_537478_default_big.jpeg',
+            name: 'Honor',
+            text: 'Фирменные Honor по самым доступным ценам',
+            price: '12 000 сом',
+            color: 'Черный',
+            mah: '4000 mah'
+        },
+        {
+            img: 'http://www.three.co.uk/static/images/device_pages/MobileVersion/Samsung/Galaxy_S21_5G/Phantom_Grey/carousel/1.jpg',
+            name: 'Samsung',
+            text: 'Фирменные Samsung по самым доступным ценам',
+            price: '15 000 сом',
+            color: 'Прозрачный',
+            mah: '5500 mah'
+        },
+        {
+            img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4heEr-tCMkTTb_GwAkpf5-ctBvGAoXVqbFMg_qjZ2N-Mnc9abqkNLFwsCBydXXzmVgxI&usqp=CAU',
+            name: 'Iphone',
+            text: 'Фирменные Iphone по самым доступным ценам',
+            price: '80 000 сом',
+            color: 'серый',
+            mah: '4000 mah'
+        },
+        {
+            img: 'https://www.e-katalog.ru/jpg_zoom1/1999394.jpg',
+            name: 'Nokia',
+            text: 'Фирменные Nokia по самым доступным ценам',
+            price: '6 000 сом',
+            color: 'Синий',
+            mah: '5000 mah'
+        },
+        {
+            img: 'https://images.ua.prom.st/2486230256_w640_h640_smartfon-realmi-q.jpg',
+            name: 'Realmi',
+            text: 'Фирменные Realmi по самым доступным ценам',
+            price: '14 000 сом',
+            color: 'Белый',
+            mah: '6000 mah'
+        },
+        ];
+        // let a = ''
+        // // function asan () {
+            
+        // }
+        // a = array[0].img[0]
+        // console.log(a.toLocaleLowerCase());
+
+        btn.onclick = () => {
+            
+            div.innerHTML = ""
+            array.map(r => {
+                if (r.name.includes(inp.value ) && inp.value.length > 0) {
+                    div.innerHTML += `<div>
+                        <img style ="width: 300px; height: 300px" src="${r.img}" alt="">
+                        <br/>
+                        Имя: ${r.name}
+                        <div>Описания: ${r.text}</div>
+                        <div>Цена: ${r.price}</div>
+                        <div>Цвет: ${r.color}</div>
+                        <div>Ёмкость аккумулятора: ${r.mah}</div>
+                        </div>`
+                }
+
+
+                // else if(inp.value.length = ""){
+                // //     div.innerHTML = "jok"
+                // }
+                // if(inp.value.length = ""){
+                //     div.innerHTML = ""
+                // }
+            })
+
+        }
+    </script>
+</body>
+
+</html> 

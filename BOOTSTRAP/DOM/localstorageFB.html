@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        .maindiv {
+            width: 400px;
+            height: 500px;
+            border: 2px solid lightgrey;
+            border-radius: 10px;
+            background-color: whitesmoke;
+            box-shadow: 0px 0px 20px lightgrey;
+            position: absolute;
+            top: 5%;
+            left: 35%;
+
+        }
+
+        .input0 {
+            width: 180px;
+            height: 30px;
+            border: 1px solid black;
+            border-radius: 4px;
+            margin-left: 5px;
+            margin-top: 15px;
+        }
+
+        .input1 {
+            width: 180px;
+            height: 30px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-top: 15px;
+            margin-left: 5px;
+        }
+
+        .checkbox1 {
+            margin-top: 40px;
+            width: 15px;
+            height: 15px;
+            border: 1px solid black;
+            margin-left: 20px;
+        }
+
+        .checkbox0 {
+            margin-top: 40px;
+
+        }
+
+        .signup {
+            width: 250px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: green;
+            margin-top: 20px;
+            color: white;
+            font-size: 20px;
+        }
+
+        ;
+
+        /* ---------------------------------------------------------------------------------------------------- */
+        .maindiv0 {
+            width: 400px;
+            height: 550px;
+            border: 2px solid lightgrey;
+            border-radius: 10px;
+            background-color: whitesmoke;
+            box-shadow: 0px 0px 20px lightgrey;
+            position: absolute;
+            top: 5%;
+            left: 35%;
+        }
+
+        input {
+            width: 300px;
+            height: 30px;
+            border: 1px solid black;
+            border-radius: 4px;
+            margin-left: 40px;
+            margin-top: 15px;
+        }
+
+        .btn1 {
+            width: 250px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: blue;
+            margin-top: 20px;
+            color: white;
+            font-size: 20px;
+            margin-left: 70px;
+        }
+
+        .btn2 {
+            width: 250px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: green;
+            margin-top: 20px;
+            margin-left: 70px;
+            color: white;
+            font-size: 15px;
+        }
+
+        .h {
+            color: blue;
+            font-size: 30px;
+            margin-left: 150px;
+        }
+
+        .p1 {
+            color: blue;
+            margin-left: 150px;
+
+        }
+
+        .mains {
+            width: 400px;
+            height: 400px;
+            border: 2px solid lightgrey;
+            border-radius: 10px;
+            background-color: whitesmoke;
+            box-shadow: 0px 0px 20px lightgrey;
+            position: absolute;
+            top: 5%;
+            left: 35%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- --------------------------------------------------------------------- -->
+    <!-- Регистрация -->
+    <div id="maindiv1">
+        <div class="maindiv">
+            <h1 style="text-align: center;">Регистрация</h1>
+            <p style="text-align: center;">Быстро и легко</p>
+            <hr>
+            <input class="input0" type="text" name="" id="name" placeholder="Имя">
+            <input class="input0" type="text" name="" id="surname" placeholder="Фамилия">
+            <br>
+            <input class="input1" type="text" name="" id="number" placeholder="Номер мобильного телефона или эл.адрес">
+            <input class="input1" type="text" id="pin" placeholder="Новый пароль">
+            <br>
+            <input type="checkbox" class="checkbox1" id="check" name="Запомни меня">
+            <label for="Запомни меня" class="checkbox0">Запомни меня</label>
+            <br>
+            <center><button class="signup" disabled id="signup">Регистрация</button></center>
+            <hr>
+            <center>
+                <p>Есть уже акккаунт?</p>
+            </center>
+            <center> <a href="localenterfacebook.html" id="page1"> <button class="signup"> Вход</button> </a></center>
+
+        </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------ -->
+    <!-- вход -->
+    <div id="maindiv2" style="display: none;" class="mains">
+        <div class="maindiv0">
+
+            <h1 class="h">Вход</h1>
+            <p id="pp"></p>
+            <input type="text" name="" id="inp1" placeholder="Номер мобильного телефона или эл.адрес">
+            <br>
+            <input type="text" name="" id="inp2" placeholder="Пароль">
+            <button class="btn1" id="bt">Вход</button>
+            <p class="p1">Забыли пароль?</p>
+            <hr>
+            <br>
+            <a href="localstorageFB.html" id="page2"> <button class="btn2">Создать новый акккаунт</button></a>
+        </div>
+    </div>
+
+    <div style="display: none;" id="wellcome">
+        <center>
+            <h1 style="color: green; font-size: 80px;"> Добро пожаловать в мир Facebook !</h1>
+        </center>
+    </div>
+    <!-- <input type="text" id="inp">
+    <button id="btn">ok</button> -->
+
+    <script>
+        let name_ = document.getElementById("name")
+        let surname_ = document.getElementById("surname")
+        let number_ = document.getElementById("number")
+        let pin_ = document.getElementById("pin")
+        let signup_ = document.getElementById("signup")
+        let chek_ = document.getElementById("check")
+        let maindiv_ = document.getElementById("maindiv1")
+        let maindiv2_ = document.getElementById("maindiv2")
+        let page_ = document.getElementById("page1")
+
+
+        let input1_ = document.getElementById("inp1")
+        let input2_ = document.getElementById("inp2")
+        let bt1 = document.getElementById("bt")
+        let welcome_ = document.getElementById("wellcome")
+        let pp1 = document.getElementById("pp")
+
+
+
+        let name1 = ""
+        let surname1 = ""
+        let pin1 = ""
+        let num = ""
+
+        // ------------------------------------------------------------------------------
+        // button disabled
+        name_.oninput = (event) => {
+            if (name_.value.length > 0 && surname_.value.length > 0 && number_.value.length > 0 && pin_.value.length > 0) {
+                signup_.disabled = false
+            }
+            name1 = event.target.value
+        }
+        surname_.oninput = (event) => {
+            if (name_.value.length > 0 && surname_.value.length > 0 && number_.value.length > 0 && pin_.value.length > 0) {
+
+                signup_.disabled = false
+            }
+            surname1 = event.target.value
+        }
+        number_.oninput = (event) => {
+            if (name_.value.length > 0 && surname_.value.length > 0 && number_.value.length > 0 && pin_.value.length > 0) {
+
+                signup_.disabled = false
+            }
+            num = event.target.value
+        }
+        pin_.oninput = (event) => {
+            if (name_.value.length > 0 && surname_.value.length > 0 && number_.value.length > 0 && pin_.value.length > 0) {
+
+                signup_.disabled = false
+            }
+            pin1 = event.target.value
+        }
+        // ------------------------------------------------------------------------------------------------------------------
+     
+    //  запомни меня
+        chek_.oninput = () => {
+
+            localStorage.setItem("name", name1)
+            localStorage.setItem("surname",surname1)
+            localStorage.setItem("number",num)
+            localStorage.setItem("pin",pin1 )
+        }
+
+        // --------------------------------------------------------------------------------------------------
+        // регистрация
+        signup_.onclick = () => {
+
+            maindiv_.innerText = ""
+            maindiv2_.style.display = "block"
+
+        }
+// --------------------------------------------------------------------------------------------------------
+// вход
+        bt1.onclick = () => {
+         
+            if (input1_.value == localStorage.getItem("number") && input2_.value == localStorage.getItem("pin")) {
+                 maindiv2_.style.display = "none"
+                 welcome_.style.display = "block"
+            }else{
+                input1_.style.borderColor = "red"
+                input2_.style.borderColor = "red"
+                pp1.innerHTML = `<p style = "text-align:center; color: red"> Неверный пароль или логин </p>`
+                maindiv2_.style.borderColor = "red"
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let btn1 = document.getElementById("btn")
+        // let inp = document.getElementById("inp")
+        // btn1.onclick = () => {
+        //     localStorage.setItem('key', "adi")
+        //     alert(localStorage.key(1))
+            // localStorage.removeItem('2')
+            // localStorage.clear()
+        // }
+
+
+
+
+    </script>
+</body>
+
+</html>

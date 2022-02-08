@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+</head>
+
+<body>
+    <input type="text" name="" id="inp" placeholder="Поиск">
+    <input type="text" name="" id="inp2" placeholder="поиск по ценам">
+    <button onclick="add()">Поиск по ценам</button>
+    <div id="div" style = "display: flex;"></div>
+    <img src="" alt="">
+
+<script>
+    let inp1 = document.getElementById("inp")
+    let but = document.getElementById("but")
+    let inp2 = document.getElementById("inp2")
+    let but2 = document.getElementById("but2")
+    let div = document.getElementById("div")
+
+    let obj_ = [
+        {
+            img: 'https://cdn.motor1.com/images/mgl/RzE0m/s1/2020-honda-civic-hatchback-facelift.webp',
+            name: "Honda",
+            text: "Набор двигателей прежний: в Европе Honda Civic оснащается двумя бензиновыми турбомоторами (1 л, 126 л.с. и 1,5 л, 182 л.с.) либо 1,6-литровым дизелем, развивающим 120 л.с. Начало продаж намечено на январь следующего года. В России Honda Civic не продается, и к слову, к моменту смены поколений семейство может покинуть и европейский рынок.",
+            price: "5100",
+            color: "dar whita",
+        },
+        {
+            img: 'https://s0.rbk.ru/v6_top_pics/media/img/3/85/756286050165853.jpg',
+            name: "Toyota",
+            text: "Техническая составляющая изменениям не подверглась. Toyota Fortuner GR Sport доступен с 2,4-литровым турбодизелем мощностью 149 сил, либо с 163-сильным бензиновым мотором рабочим объемом 2,7 литра. Оба двигателя работают с 6-ступенчатой автоматической коробкой и задним приводом. Цены на новинку начинаются от 544 млн индонезийских рупий (примерно 2,8 млн руб. по нынешнему купсу",
+            price: "8000",
+            color: "white",
+        },
+        {
+            img: 'https://www.ixbt.com/img/n1/news/2022/0/4/tesla-roadster_large.jpg',
+            name: "Tesla",
+            text: "По мнению Tesla, когда продукт действительно хорош, люди сами активно его рекомендуют. Поэтому компания сосредоточилась на исследованиях и разработках, а также на наращивании темпов производства.",
+            price: "10000",
+            color: "red",
+        },
+        {
+            img: 'https://fichasmotor.com/images/daewoo/daewoo-lanos-klat-1-5-i-86-cv.jpg',
+            name: "Daewoo",
+            text: "Daewoo Nexia — автомобиль малого класса, разработанный немецким концерном Opel и впоследствии модернизированный южнокорейской компанией Daewoo.",
+            price: "7000",
+            color: "gray"
+        },
+        {
+            img: 'https://wroom.ru/i/cars2/mercedesbenz_visioneqs_1.jpg',
+            name: "Mercedes",
+            text: "Daewoo Nexia — автомобиль малого класса, разработанный немецким концерном Opel и впоследствии",
+            price: "5400",
+            color: "white",
+        },
+        {
+            img: 'https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=http://cms.haymarketindia.net/model/uploads/modelimages/X5ModelImage.jpg&w=730&h=484&q=75&c=1',
+            name: "BMW",
+            text: "4,4-литровый твин-турбо V8 получил новую схему ECU, новые турбокомпрессоры, новую выхлопную систему и лучшую систему охлаждения. В конце концов, автомобиль достиг 808 л.с. и 1000 Нм крутящего момента. © https://www.rubmw.ru/news/808-silnyiy-bmw-m8-gran-coupe-ot-g-power/",
+            price: "5800",
+            color: "white",
+           
+        },
+        {
+            img: 'https://cdn.motor1.com/images/mgl/BjO4m/s1/2021-ford-explorer-king-ranch.webp',
+            name: "Ford",
+            text: "Главная особенность этого кроссовера – богатый интерьер с отделкой из кожи и натурального дерева, ручной прострочкой и логотипами Running W. Также машина получила пакет Premium Technology с мультиконтурными массажными креслами, 10,1-дюймовым центральным тачскрином с портретной ориентацией и акустикой B&O Sound System с 14 динамиками, специально адаптированной под данный салон.",
+            price: "9000",
+            color: "white",
+        },
+        {
+            img: 'https://wroom.ru/i/carsmini/hyundaipalisade.jpg',
+            name: "Hyundai",
+            text: "Hyundai Sonata — среднеразмерный переднеприводный седан. В соответствии с классификацией легковых автомобилей по формальному признаку (габариты), принятой в ЕС, автомобиль принадлежит к сегменту E — «Executive cars», по Euro NCAP — к «Large family car» (сегмент D)[1]. Неофициальные источники, дилеры и журналисты, специализирующиеся на данной тематике, относят автомобиль как к D-сегменту[2], так и к бизнес-классу.",
+            price: "5500",
+            color: "white",
+        }, 
+        {
+            img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/2018_Nissan_Leaf_Tekna_Front.jpg/1200px-2018_Nissan_Leaf_Tekna_Front.jpg',
+            name: "Nissan",
+            text: "Nissan LEAF — электромобиль японского концерна Nissan, серийно выпускаемый с весны 2010 года. Мировая премьера состоялась на международном Токийском автосалоне в 2009 году. Заказы на модель японские и американские дилеры компании начали принимать 1 апреля 2010 года, сборка первых серийных экземпляров началась в Японии (г. Оппама),",
+            price: "74400",
+            color: "white",
+        },
+         {
+            img: 'https://cdnimg.rg.ru/img/content/220/82/81/renault_kiger_20_d_850.jpeg',
+            name: "Renault",
+            text: "На АвтоВАЗе начали производство новой генерации Renault Logan и Sandero для российского рынка по полному технологическому циклу. Появились подробности о внешности автомобилей и об их опциональном оснащении.",
+            price: "8500",
+            color: "white",
+        }, 
+        {
+            img: 'https://www.ixbt.com/img/n1/news/2022/0/3/lada-vesta-facelift-front2.jpg_large.png',
+            name: "Lada",
+            text: "В салоне ожидается новая панель с большим вертикальным экраном мультимедийной системы, электронная панель приборов, унифицированный с Renault Arkana и Duster блок управления климат-контролем. Автомобиль будет построен на платформе Lada B и получит двигатели ВАЗ объёмом 1,6 и 1,8 литра.",
+            price: "2000",
+            color: "white",
+        },
+         {
+            img: 'https://s0.rbk.ru/v6_top_pics/media/img/5/55/756286709762555.jpg',
+            name: "Audi",
+            text: "Внешность автомобиля выполнена с оглядкой на Horch 853 «Manuela», сделанный в середине 1930-х для звезды автоспорта тех времен немца Бернда Роземайера. В частности, о сходстве с классической машиной говорят пропорции кормы концепт-кара, а также большие заднепетельные двери, открывающиеся против направления движения",
+            price: "6500",
+            color: "white",
+        },
+        {
+            img: 'https://cdnimg.rg.ru/img/content/212/95/22/Opel-Mokka-2021-1280-06_d_850.jpg',
+            name: "Opel",
+            text: " Итоговые рейтинги Мокки выглядят так: защита взрослых пассажиров - 73%, детей - 75%, травмобезопасность при наезде на пешехода - 58%, комплекс превентивной безопасности - 64%",
+            price: "5400",
+            color: "white",
+        }, {
+            img: 'https://www.autostat.ru/application/includes/blocks/big_photo/images/cache/000/087/466/bdb38f56-670-0.jpg',
+            name: "Ferrari",
+            text: "Клиенты, которые оформят предзаказ до конца декабря, смогут купить купе за 34 млн 030 тыс. рублей, а уже в 2021 году цена базовой версии возрастет до 41 млн рублей. Гибрид Ferrari SF90 Stradale – флагман итальянской марки",
+            price: "5000",
+            color: "red",
+        },
+        {
+            img: 'https://img3.badfon.ru/wallpaper/big/e/8a/lamborghini-aventador-lp700-4-1325.jpg',
+            name: "Lamborghini",
+            text: "Lamborghini Veneno — итальянский суперкар, выпущенный ограниченной серией в 2013 году компанией Lamborghini. Предсерийная версия (№ 0, после окончания автосалона она была отправлена в музей Lamborghini) была показана на Женевском автосалоне в марте 2013 года в честь 50-летия марки[1]. Всего выпущено 4 экземпляра по цене более 3 миллионов евро; один для музея Lamborghini, три для покупателей, причём все они были уже распроданы до самой премьеры автомобиля.",
+            price: "9340",
+            color: "red",
+        },
+        {
+            img: 'https://motor.ru/imgs/2021/06/04/21/4703015/e90d2f772bade6c1d38e081bf5067caefdbb7a3e.jpg',
+            name: "Bugatti",
+            text: "Британский аукцион Tom Hartley Junior пустил с молотка последний выпущенный экземпляр экстремальной модификации Super Sport гиперкара Bugatti Veyron с порядковым номером 48.",
+            price: "780000",
+            color: "black",
+        },
+
+    ];
+    function add() {
+        div.innerHTML = "";
+        obj_.map(t => {
+            if ( +t.price >= +inp1.value && +t.price <= +inp2.value ) {
+                
+                div.innerHTML += `<div >
+                        <div><img style ="width: 300px; height: 300px" src="${t.img}" alt=""></div>
+                        <br/>
+                        <div  style= "color:red" >  Марка: ${t.name}</div>
+                        <div>Описания: ${t.text}</div>
+                        <div  style= "color:red" >Цена: ${t.price}</div>
+                        <div style= "color:red" >Свет: ${t.color}</div>
+                        </div>`
+            }
+        })
+    };
+
+
+
+</script>
+</body>
+</html>

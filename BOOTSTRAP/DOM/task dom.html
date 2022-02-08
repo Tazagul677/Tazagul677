@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="word">
+
+    </div>
+
+<!-- --------------------------------------------------------------------------------------------- -->
+    <!-- <div id="word">
+    </div> -->
+
+<!-- ------------------------------------------------------------------------------------------------- -->
+    <script>
+    //    let names = ["Tazagul", "Farid","Adilet","Bekbolsun","Ali"]
+    //     let al = document.getElementById("word")
+      
+       
+    //  for (let i = 0; i < names.length; i++){
+    //      if( i % 2 == 0){
+    //         al.innerHTML += `<span style = "color: red; fontSize:30px; font-size: 30px ">${names[i]},</span>`
+    //         al.style.fontFamily = "Impact,sans-serif"
+               
+    //      }else{
+    //         al.innerHTML += `<span style = "color: green;fontSize:30px; font-size: 30px" >${names[i]},</span>`
+    //      }
+     
+    
+    //  }
+
+    // for ( let name of names){
+    //     console.log(name)
+    // }
+    // let num = 
+    // console.log(num)
+
+    // -----------------------------------------------------------------------------------------------------------------
+
+let prom = prompt("Write any word")
+let dif = document.getElementById("word")
+for( let i = 0; i < prom.length; i++){
+i % 2 == 0 ? dif.innerHTML += `<span style = "color: blue"> ${prom[i]} </span>`: dif.innerHTML += `<span style = "color: red"> ${prom[i]} </span>`       
+    
+}
+
+    </script>
+</body>
+</html>

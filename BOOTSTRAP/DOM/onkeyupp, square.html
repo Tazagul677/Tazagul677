@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main1 {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main1" id="div"></div>
+    <script>
+        let div = document.getElementById("div");
+        let top_ = 50
+        let left_ = 50
+
+        document.body.onkeydown = (e) => {
+            switch (e.keyCode) {
+                // down
+                case 40:
+                    top_+= 5
+                    div.style.top = `${top_}%`;
+                    break;
+                // top
+                case 38:
+                    top_ -= 5
+                    div.style.top = `${top_}%` 
+                    break;
+                // left
+                case 37:
+                left_ -= 5
+                    div.style.left = `${left_}%`
+                    break;
+                // right
+                case 39:
+                    left_ += 5
+                    div.style.left = `${left_ + 5}%`
+                    break;
+            };
+        };
+
+
+
+    </script>
+</body>
+
+</html>

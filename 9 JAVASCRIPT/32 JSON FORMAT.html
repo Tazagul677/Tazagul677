@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <h2></h2>
+    <h3></h3>
+<script>
+//     let men = {
+//         name : 'Tazagul',
+//         Age : 18,
+//         city :'Osh',
+//         number : "0773000398",   
+// };
+// localStorage.setItem("nen", JSON.stringify(men));
+
+//  localStorage.getItem("nen");
+// console.log(JSON.parse( localStorage.getItem("nen")))
+ let o = JSON.parse(localStorage.getItem("nen"))
+document.body.children[0].innerText = o.name
+document.body.children[1].innerText = o.city
+document.body.children[2].innerText = o.number
+// JSON.parse(localStorage.getItem("nen")).name;
+// document.body.children[1].innerText = JSON.parse(localStorage.getItem("nen")).city;
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img1{
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            animation-name: car;
+            animation-duration:4s ;
+            /* animation-direction: alternate; */
+            animation-iteration-count: infinite;
+        }
+        @keyframes car{
+            0%{
+                left: 0%;
+                top: 0%;
+            }
+            25%{
+                left: 0%;
+                transform: rotate(20deg);
+                box-shadow: 5px 0px 5px tomato;
+
+            }
+            50%{
+                left: 80%;
+                transform:  rotate(0deg);
+                box-shadow: 5px 0px 5px tomato;
+
+            }
+                100%{
+                    left: 0%;
+                    transform: rotate(-360deg);
+                    box-shadow:  5px 0px 5px tomato;
+
+
+                }
+            }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <img class="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR18UvMwJkPPqt0zPsD87aJA2Gmmm0pfxcPzNclRJBg3I_OqWCW&usqp=CAU" alt="">
+    </div>
+</body>
+</html>

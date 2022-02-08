@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>
+		Homework 6 lesson
+	</title>
+	<style type="text/css">
+		body {
+			background-image: url(https://as2.ftcdn.net/v2/jpg/01/69/28/31/1000_F_169283105_FeT4EdgtIaBH08Qrs9cCAqdASteodVdj.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.asan {
+			color: red;
+			background-color: lightblue;
+			border-radius: 6px;
+			border: 1px solid black;
+			padding: 30px;
+			margin: 10px;
+			width: 100%;
+			display: inline-block;
+			box-shadow: 10px 10px 15px black;
+		}
+
+		.uson {
+			border: none;
+		}
+
+		.bbb {
+			background-color: lightblue;
+			border: 2px solid black;
+			width: 200px;
+			height: 300px;
+			border-radius: 6px;
+			display: inline-block;
+			margin: 20px;
+			padding: 20px;
+			box-shadow: 0px 0px 10px black;
+			text-shadow: 10px 10px 5px darkblue;
+		}
+
+		.bbb:hover {
+			width: 210px;
+			background-color: darkblue;
+			height: 310px;
+		}
+
+		@media only screen and (max-width: 700px) {
+			.bbb {
+				display: none;
+				flex-direction: column;
+			}
+
+			.asan {
+				width: 500px;
+				height: 100px;
+				flex-direction: column;
+			}
+
+		}
+
+
+		.ppp {
+			background-color: lightblue;
+			border: 2px solid black;
+			padding: 30px;
+			margin: 10px;
+			width: 100%;
+			box-shadow: 10px 10px 15px black;
+			border-radius: 5px;
+		}
+
+		@media only screen and (max-width: 700px) {
+			.ppp {
+				width: 500px;
+				height: 100px;
+			}
+		}
+
+		.qqq {
+			border: 1px solid black;
+			border-width: 2px;
+			border-radius: 2px;
+			background-color: green;
+			width: 65px;
+			height: 25px;
+		}
+
+		.qqq:hover {
+			background-color: red;
+			width: 70px;
+			height: 30px;
+		}
+
+		.www {
+			background-color: lightblue;
+			border: 2px solid black;
+			width: 200px;
+			height: 250px;
+			border-radius: 3px;
+			margin: 10px;
+			padding: 10px;
+			box-shadow: 0px 0px 8px black;
+			text-shadow: 0px 0px 5px darkblue;
+			position: relative;
+			left: 100px;
+			display: none;
+
+
+		}
+
+		.www:hover {
+			background-color: darkblue;
+			width: auto;
+			height: 260px;
+		}
+
+		@media only screen and (max-width: 700px) {
+			.www {
+				display: inline-block;
+				width: auto;
+				height: 250px;
+			}
+		}
+
+		.kk {
+			display: inline-block;
+		}
+
+		.kk:hover {
+			background-color: white;
+			border-radius: 4px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div>
+		<div>
+			<div align="center" class="asan">
+				<div class="kk" style="display: inline-block; margin: 10px"><a href="https://busyteacher.org/">ЯЗЫКОВЫЕ
+						КУРСЫ</a></div>
+				<div class="kk" style="display: inline-block; margin: 10px"><a href="https://busyteacher.org/">КНИГИ</a>
+				</div>
+				<div class="kk" style="display: inline-block; margin: 10px"><a
+						href="https://busyteacher.org/">ЖУРНАЛЫ</a></div>
+				<div class="kk" style="display: inline-block; margin: 10px"><a
+						href="https://busyteacher.org/">МЕРОПРИЯТИИ</a></div>
+				<div class="kk" style="display: inline-block; margin: 10px"><a
+						href="https://busyteacher.org/">ВЫПУСКНИКИ</a></div>
+				<div class="kk" style="display: inline-block; margin: 10px"><a href="https://busyteacher.org/">НАШ
+						КОЛЛЕКТИВ</a></div>
+				<div class="kk" style="display: inline-block; margin: 10px"><a href="https://busyteacher.org/">О НАС</a>
+				</div>
+				<input align="left" type="search" style="border: 2px solid black; border-radius: 2px;"
+					placeholder="Поиск">
+				<button class="qqq"> Издоо
+				</button>
+				<select>
+					<option value="Кыргызский" selecte>
+						Кыргызский
+					</option>
+					<option value="Русский">
+						Русский
+					</option>
+					<option value="Английский">
+						Кыргызский
+					</option>
+					<option value="Турецкий">
+						Турецкий
+					</option>
+					<option value="Китайский">
+						Китайский
+					</option>
+				</select>
+				<button class="qqq">Катталуу</button>
+			</div>
+		</div>
+		<div>
+			<div class="bbb">
+				<img style="width: 200px; height: 250px;"
+					src="https://images-na.ssl-images-amazon.com/images/I/61O6N34S+IL.jpg">
+				<p><a href="https://i.pinimg.com/originals/ee/3b/bb/ee3bbb31e603faa103df09fdd7a7bda2.jpg">English File
+						Beginner</a></p>
+			</div>
+			<div class="bbb">
+				<img style="width: 200px; height: 250px;" src="https://list-english.ru/video/img/2012-1.png">
+				<p><a href="https://i.pinimg.com/originals/ee/3b/bb/ee3bbb31e603faa103df09fdd7a7bda2.jpg">English File
+						Elementary</a></p>
+			</div>
+			<div class="bbb">
+				<img style="width: 200px; height: 250px;" src="https://cdn1.ozone.ru/s3/multimedia-a/6000062398.jpg">
+				<p><a href="https://i.pinimg.com/originals/ee/3b/bb/ee3bbb31e603faa103df09fdd7a7bda2.jpg">English File
+						Pre-intermediate</a></p>
+			</div>
+			<div class="bbb">
+				<img style="width: 200px; height: 250px;"
+					src="https://images-na.ssl-images-amazon.com/images/I/615RGIvJQJL.jpg">
+				<p><a href="https://i.pinimg.com/originals/ee/3b/bb/ee3bbb31e603faa103df09fdd7a7bda2.jpg">English File
+						Intermediate</a></p>
+			</div>
+			<div class="bbb">
+				<img style="width: 200px; height: 250px;"
+					src="https://images-na.ssl-images-amazon.com/images/I/61sH1SfSttL.jpg">
+				<p><a href="https://i.pinimg.com/originals/ee/3b/bb/ee3bbb31e603faa103df09fdd7a7bda2.jpg">English File
+						Advanced</a></p>
+			</div>
+			<div class="bbb">
+				<img style="width: 200px; height: 250px; text-decoration: none;"
+					src="https://i.pinimg.com/originals/ee/3b/bb/ee3bbb31e603faa103df09fdd7a7bda2.jpg">
+				<p><a href="https://i.pinimg.com/originals/ee/3b/bb/ee3bbb31e603faa103df09fdd7a7bda2.jpg">Журнал
+						Vogue</a></p>
+			</div>
+			<div class="bbb">
+				<img style="width: 200px; height: 250px;"
+					src="http://images6.fanpop.com/image/photos/42600000/Women-s-Health-Magazine-Cover-magazines-42654592-500-701.jpg">
+				<p><a
+						href="http://images6.fanpop.com/image/photos/42600000/Women-s-Health-Magazine-Cover-magazines-42654592-500-701.jpg">Здоровья
+						женщин</a></p>
+
+			</div>
+			<div class="bbb">
+				<img style="width: 200px; height: 250px;"
+					src="https://fashionmagazine.com/wp-content/uploads/2014/09/Fashion-Magazine-October-2014-Blake-Lively1-480x0-c-default.jpg">
+				<p><a
+						href="https://fashionmagazine.com/wp-content/uploads/2014/09/Fashion-Magazine-October-2014-Blake-Lively1-480x0-c-default.jpg">Журнал
+						Fashion</a></p>
+			</div>
+			<div class="bbb">
+				<img style="width: 200px; height: 250px;"
+					src="https://www.yorkshirenetwork.co.uk/wp-content/uploads/2020/08/Forbes-Magazine.jpg">
+				<p><a href="https://www.yorkshirenetwork.co.uk/wp-content/uploads/2020/08/Forbes-Magazine.jpg">Журнал
+						Forbes</a></p>
+			</div>
+			<div class="bbb">
+				<img style="width: 200px; height: 250px;" src="https://covers.magazinecloner.com/covers/68248.jpg">
+				<p><a href="https://covers.magazinecloner.com/covers/68248.jpg">Журнал CEO</a></p>
+			</div>
+		</div>
+		<div>
+			<div class="www">
+				<img style="width: 200px; height: 250px; float: left;"
+					src="https://www.fluentu.com/blog/french/wp-content/uploads/sites/3/2015/03/French-magazines6.jpg">
+				<b><a style="display: inline-block;" href="https://covers.magazinecloner.com/covers/68248.jpg">Журнал
+						CEO</a> Lorem ipsum dolor sit amet
+					consectetur adipisicing elit.Fugit dolorem corrupti sed atque voluptates culpa laudantium harum?
+					Officiis, debitis est tempora minima quo sit eligendi similique optio dolorem repellat amet!</b>
+
+			</div>
+			<div class="www">
+				<img style="width: 200px; height: 250px;float: left; "
+					src="https://miro.medium.com/max/636/0*h2lWCpSr0UXvS9rV.jpg">
+				<b><a style="display: inline-block;"
+						href="http://images6.fanpop.com/image/photos/42600000/Women-s-Health-Magazine-Cover-magazines-42654592-500-701.jpg">Здоровья
+						женщин</a>orem ipsum dolor sit amet
+					consectetur adipisicing elit.Fugit dolorem corrupti sed atque voluptates culpa laudantium harum?
+					Officiis, debitis est tempora minima quo sit eligendi similique optio dolorem repellat amet! </b>
+			</div>
+			<div class="www">
+				<img style="width: 200px; height: 250px;float: left;"
+					src="https://www.lovehappensmag.com/blog/wp-content/uploads/2021/01/3356d93ec6c8e430be912b6a98ad8855-790x1024.jpg">
+				<b><a style="display: inline-block;"
+						href="https://fashionmagazine.com/wp-content/uploads/2014/09/Fashion-Magazine-October-2014-Blake-Lively1-480x0-c-default.jpg">Журнал
+						Fashion</a>Lorem ipsum dolor sit amet
+					consectetur adipisicing elit.Fugit dolorem corrupti sed atque voluptates culpa laudantium harum?
+					Officiis, debitis est tempora minima quo sit eligendi similique optio dolorem repellat amet!</b>
+			</div>
+			<div class="www">
+				<img style="width: 200px; height: 250px;float: left;"
+					src="http://www.interiordesignmagazines.eu/wp-content/uploads/2016/02/top-50-usa-interior-design-magazines-that-you-should-read-part-2-Adweek-kim-kardashiam.jpg">
+				<b><a style="display: inline-block;"
+						href="https://www.yorkshirenetwork.co.uk/wp-content/uploads/2020/08/Forbes-Magazine.jpg">Журнал
+						Forbes</a> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Fugit dolorem corrupti sed atque voluptates culpa laudantium harum?
+					Officiis, debitis est tempora minima quo sit eligendi similique optio dolorem repellat amet!</b>
+			</div>
+		</div>
+
+		<div class="ppp" style="display: inline-block; margin: 10px; margin-right: 40px;">
+			НАШИ СТУДЕНТЫ В:
+
+			<a style="margin: 20px;" href="https://busyteacher.org/"> ЯПОНИИ</a>
+
+			<a style="margin: 20px; text-decoration: none;" href="https://busyteacher.org/"> КОРЕИ</a>
+
+			<a style="margin: 20px; text-decoration: none;" href="https://busyteacher.org/"> АМЕРИКЕ</a>
+
+			<a style="margin: 20px;text-decoration: none;" href="https://busyteacher.org/"> ГЕРМАНИИ</a>
+
+			<a style="margin: 20px;text-decoration: none;" href="https://busyteacher.org/"> БРИТАНИИ</a>
+
+			<a style="margin: 20px;text-decoration: none;" href="https://busyteacher.org/"> ИТАЛИИ</a>
+
+			<a style="margin: 20px;text-decoration: none;" href="https://busyteacher.org/"> ТУРЦИИ </a>
+
+			<a style="margin: 20px;text-decoration: none;" href="https://busyteacher.org/"> ОТЗЫВЫ</a>
+
+		</div style="display: inline-block; margin: 10px; margin-right: 40px;">
+		<a href="" https://busyteacher.org /> Наш адрес Г.Ош ул.Масалиева 119 <div>yuy6y65y65y</div></a>
+		<a href="" https://busyteacher.org />+996 774 55 32 46</a>
+	</div>
+
+	 <script>
+		 if (!tired()) {
+			 keepCoding();
+		 } else{
+			 drinkCoffee();
+
+		 }
+	
+	
+	
+	</script>
+
+
+
+</body>
+
+
+</html>

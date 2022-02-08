@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+   
+    /* .sq{
+        display: inline;
+        width: 200px;
+        height: 200px;
+    } */
+</style>
+</head>
+<body>
+    <div id ="round" style = "display: inline-block;">
+
+    </div>
+    <!-- <div class="square">
+
+    </div> -->
+    <!-- <div id = "men" >
+        Test
+    </div> -->
+    <script>
+    //   let s =  document.getElementById("men");
+    //   s.style. color = "red";
+    //   s.innerHTML += "<span style = 'color: blue; font-size: 100px;Text-shadow: 0px 0px 15px blue;' > Жома </span>"
+       let number = prompt("10 го чейин сан жаз!")
+       let color1 = ["red","blue","yellow","green","purple","aqua", "black", "lightblue"]
+       let  s = 0
+      //  let t = 0 
+
+      for (let i = 0; i < number; i++) {
+        let text =   document.getElementById("round");
+        text.innerHTML += 
+          `<div style = 'background-color: ${color1[s]}; display: inline-block;border: 2px solid green; width: 200px; height: 200px; margin: 10px; border-radius:${i %  2 === 0 ? "100" : "0"}%;'> </div>`
+        s == 7 ? s = 0 : s++
+        
+        // let text2 = document.getElementById("square")
+        // text.innerHTML += 
+        //   `<div style = 'background-color: ${color1[t]}; display: inline-block;border: 2px solid green; width: 200px; height: 200px; margin: 10px;'> </div>`
+        // t == 7 ? t = 0 : t++
+        
+      
+        // number % 2 == 0 ? s++ : t++
+
+      }
+      
+
+    </script>
+</body>
+</html>

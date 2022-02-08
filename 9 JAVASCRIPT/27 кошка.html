@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="war" value = " men">
+    <button id="buton"> Show</button>
+    <img src="" style="width:400px; height: 300px;" id="imgs" alt="">
+    <h1 align="center" id="h111"></h1>
+    <script>
+        const images = {
+            'кошка': 'https://icdn.lenta.ru/images/2020/08/08/13/20200808131211392/square_1280_7efc59cef497ea4709ca7c66021763cb.jpg',
+            'собака': 'https://ichef.bbci.co.uk/news/640/cpsprodpb/475B/production/_98776281_gettyimages-521697453.jpg',
+            'ноутбук': 'https://mobile-review.com/articles/2020/image/echo-102/pic/4.jpg',
+            'телефон': 'https://www.ixbt.com/img/n1/news/2020/9/4/s-l1600_large.png',
+            'tesla': 'https://www.ixbt.com/img/n1/news/2021/5/3/maxresdefault_0_large.png',
+            'mercedes': 'https://autoreview.ru/images/Article/1712/Article_171287_860_575.jpg',
+        };
+        let input  = document.getElementById("war");
+        let buttons = document.getElementById("buton");
+        let imgss = document.getElementById("imgs");
+        let me = document.getElementById("h111")
+        let ttt = input.value;
+        console.log(input.value);
+        let colors = ["green","purple","red","yellow","aqua"]
+        let u = 2;
+        function walk() {
+            
+            me.innerHTML = input.value;
+            me.style.color = colors[u];
+            u == 4 ? u = 0 : u++;  
+            if (input.value in images) {
+                me.innerHTML = input.value;
+            }else {
+                imgss.src = "https://www.inksystem.biz/uploaded/img/article/error-5100.jpg"
+            }
+          
+        } buttons.onclick = function () {
+            walk()
+            
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

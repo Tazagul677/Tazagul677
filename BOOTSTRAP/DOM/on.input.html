@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="int">
+    <button id="btn"> fghfhgfhghghf</button>
+    <div id="div">
+
+    </div>
+
+
+</body>
+<script>
+    let ints = document.getElementById("int")
+    let btn = document.getElementById("btn")
+    let div = document.getElementById("div")
+    let r = true
+    let d = ""
+    btn.onclick = (event) => {
+        r = !r
+        if (d !== "") {
+            if (r) {
+                div.innerHTML += `<p><li style="background-color: red"> ${d}222 </li> </p>`
+                ints.value = ""
+            } else {
+                div.innerHTML += `<p><li style="background-color:blue ">${d} </li> </p>`
+                ints.value = ""
+            }
+
+            d = ""
+        }
+    }
+    int.oninput = (event) => {
+        d = event.target.value
+    }
+    
+</script>
+
+</html>

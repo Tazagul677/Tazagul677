@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="warr">
+    <button onclick="tip()">Press me!</button>
+    <h1 id ="dir"></h1>
+    <ul></ul>
+    
+</body>
+<script>
+    let r = document.getElementById("warr")
+    let t = document.body.children[3];
+    let o = []
+      
+
+    
+   
+    function tip() {
+        localStorage.setItem("men", r.value);
+        t.innerHTML += `<li>${localStorage.getItem("men",r.value)}</li>`
+        r.value = ""
+    
+        sessionStorage.setItem("sen", JSON.stringify(o));                                                                                           
+        r.value.split("-")
+    // alert(r.value);
+   
+    
+
+    }
+    t.innerHTML += localStorage.getItem("men",r.value)
+   
+              
+    
+   
+   
+    
+   
+
+
+</script>
+</html>

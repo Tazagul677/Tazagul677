@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: pink;
+        }
+        h1{
+            text-align: center;
+        }
+        .c{
+            display: none;
+            text-align: center;
+        }
+            @media only screen and (max-width: 700px){
+                .q{
+                    display: none;
+                }
+                .c{
+                    display: inline-block;
+                    text-align: center;
+             }
+                }
+            .b{
+                height: 250px;
+                border: 1px solid black;
+                border-radius: 4px;
+                background-color:lightblue;
+                width: auto;
+                display: inline-block;
+                
+            }
+            @media only screen and (max-width: 700px){
+                .b{
+                    display: none;
+                }
+            }    
+    </style>
+</head>
+<body>
+    <h1 class="q">Hello</h1>
+    <h1 class="c">Hello media</h1>
+    <div class="b">
+        <img  style="display: inline-block; width: auto; height: 240px; float: left ;" src="https://miro.medium.com/max/636/0*h2lWCpSr0UXvS9rV.jpg" alt="magazine">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Inventore cupiditate officiis, 
+        aspernatur earum maiores illo molestiae velit unde quia, 
+        voluptates quas dolorem a?  <br> Molestias dolor amet rerum voluptate! Veritatis, nisi!
+
+
+    </div>
+    
+</body>
+</html>

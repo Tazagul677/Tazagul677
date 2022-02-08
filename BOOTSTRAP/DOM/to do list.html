@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>To do list on localStorage</h1>
+
+    <input type="text" name="" id="inp">
+    <button id="btn">Add</button>
+    <div id="span_"></div>
+
+    <script>
+        let inp_ = document.getElementById("inp")
+        let span1 = document.getElementById("span_")
+        let btn1 = document.getElementById("btn")
+        let mass = []
+
+        btn1.onclick = () => {
+            span1.innerHTML = ""
+            let input0 = inp_.value
+           
+            mass.push(input0)
+            
+            let js2 = JSON.stringify(mass)
+            let js = localStorage.setItem("word", js2)
+            inp_.value = ""
+
+            add();
+
+        };
+        add()
+     
+        
+        function add() { 
+            let js3 = localStorage.getItem("word")
+            mass  = js3 != null ?  JSON.parse(js3) : []
+            mass.map((r) => {
+                span1.innerHTML += `<div><span><ul><li>${r}</li></ul></span></div>`
+    
+          });
+        }
+
+    </script>
+</body>
+
+</html>

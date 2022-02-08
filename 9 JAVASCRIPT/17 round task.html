@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .generall1{
+            display: flex;
+            
+        }
+     
+        .round1{
+            background-color: green;
+            position: relative;
+            transform: translate(-50% -50%);
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            
+            align-items: center;
+            font-size: 60px;
+            color: white;
+            margin: 20px;
+            
+        } 
+        .round2{
+            position: relative;
+            transform: translate(-50% -50%);
+            font-size: 20px;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            color: black;
+            margin: 20px;
+            
+        } 
+        .round3{
+            background-color: red;
+            position: relative;
+            transform: translate(-50% -50%);
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            color: white;
+            margin: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class =" generall1">
+   <div class="round1" onclick="men(true)">+</div>
+   <div class="round2">0</div>
+   <div class="round3" onclick="men(false)">-</div>
+    </div>
+
+   <script>
+       let b = 0
+
+      let div2 =  document.querySelector(".round2"); 
+       function men( back) {
+          back ? div2.innerText = ++b : div2.innerText =  --b;
+          
+        }
+    //     function mena (back) {
+    //        
+            
+    //        document.querySelector(".round2").innerText = b
+
+
+           
+    //    }
+
+
+   </script>
+
+</body>
+</html>

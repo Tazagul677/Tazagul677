@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(https://www.ppt-backgrounds.net/thumbs/blue-light-hd-jpg-picture-powerpoint.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .s{
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            animation-name: lider;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+        }
+        @keyframes lider{
+            0%{
+                transform: rotate(20deg);
+            }
+            50%{
+                transform: rotate(-20deg);
+            }
+            100%{
+                transform: rotate(20deg);
+            }
+        }
+        .e{
+            background-color: darkblue;
+            width: 100%;
+            height: 80px;
+
+        }
+        .q{
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            animation-name:flower ;
+            animation-iteration-count: infinite;
+            animation-duration: -0.1s;
+            position: relative;
+            
+        }
+        @keyframes flower{
+            0%{
+                left: 0px; 
+                transform: rotate(20deg);
+            }
+            25%{
+                left: 0px;top: 10px;
+                transform: rotate(20deg);
+            }
+            50%{
+                left: 1000px;
+                transform: rotate(20deg);
+            }
+            75%{
+                left: 1000px;
+                transform: rotate(20deg);
+            }
+            100%{
+                left: 0px; 
+                transform: rotate(0deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div align="center">
+        <img class="s" src="https://hsto.org/webt/et/vg/um/etvgumvdqz6_rs1dp3kjyjt-spm.png" alt="lidernk">
+    </div>
+    <div class="e">
+        <!-- <img class="q" src="https://hsto.org/webt/et/vg/um/etvgumvdqz6_rs1dp3kjyjt-spm.png">
+         -->
+    </div>
+    
+</body>
+</html>

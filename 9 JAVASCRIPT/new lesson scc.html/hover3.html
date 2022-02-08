@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mainbox {
+            width: 1000px;
+            height: 300px;
+            border: solid 1px;
+            border-radius: 5px;
+            display: flex;
+            
+        }
+
+        .box1 {
+            overflow: hidden;
+            width: 300px;
+            height: 150px;
+            border: solid 1px;
+            margin-top: 50px;
+            margin-left: 40px;
+            transition: 1s;
+
+        }
+        .box1:hover{
+            border-radius: 10px;
+        }
+
+        .text {
+            border: 1px;
+            width: 230px;
+            height: 40px;
+            background-color: lightgray;
+            position: relative;
+            bottom: 80px;
+            left: 50px;
+            border-radius: 10px;
+            transition: 1s;
+            /* overflow: hidden; */
+        }
+
+        .box1:hover text{
+            /* top: 10%;
+            left: 25%; */
+            width: 230px;
+            height: 40px;
+            position: relative;
+            bottom: 100px;
+            left: 50px;
+
+
+        }
+
+
+        img {
+            position: relative;
+            width: 300px;
+            height: 150px;
+            transition: 1s;
+        }
+
+        img:hover {
+            width: 310px;
+            height: 160px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Breaking News</h1>
+    <div class="mainbox">
+        <div class="box1">
+            <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/3B0A/production/_122041151_gettyimages-1334548663.jpg"
+                alt="">
+            <div class="text">
+                <h5>Hatred, racism, and extremism have no place in this country.</h5>
+            </div>
+        </div>
+        <div class="box1">
+            <img src="https://c.files.bbci.co.uk/10AE6/production/_120662386_angela_merkel_getty.jpg" alt="">
+            <div class="text">
+                <h5>Hatred, racism, and extremism have no place in this country.</h5>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            border: 2px solid green;
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+
+
+        }
+
+        .main2 {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: hotpink;
+            /* transition: 0.06s; */
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="main" id="main1_">
+            <hr style="height: 3px; background-color: green; width: 300px; transform: scale();">
+            <div class="main2" id="main2_"></div>
+            
+        </div>
+    </center>
+
+    <script>
+        let div1 = document.getElementById("main1_")
+        let div2 = document.getElementById("main2_")
+
+        let top_ = 0
+        let left_ = 0
+        let set = ""
+        document.body.onkeyup = (e) => {
+
+            set = e.keyCode
+        };
+        setInterval(() => {
+
+            switch (set) {
+                // down
+                case 40:
+                   
+                    top_ += 5
+                    div2.style.top = `${top_}%`;
+                    // div2.style.transition = "0.6s"
+                    break;
+                // top
+                case 38:
+                    top_ -= 5
+                    div2.style.top = `${top_}%`;
+                    // div2.style.transition = "0.6s"
+                    break;
+                // left
+                case 37:
+                    left_ -= 5
+                    div2.style.left = `${left_}%`;
+                    // div2.style.transition = "0.6s"
+                    break;
+                // right
+                case 39:
+                    left_ += 5
+                    div2.style.left = `${left_ + 1}%`;
+                    // div2.style.transition = "0.5s"
+                    break;
+            };
+            // console.log(top_);
+
+            if (left_ > 100) {
+                left_ = -10
+            } else if (top_ >100) {
+                top_ = -10
+            }else if( left_ < -10){
+                left_ = 100  
+            } else if (top_ < -10) {
+                top_ = 100
+            }
+        }, 100);
+
+    </script>
+</body>
+
+</html>

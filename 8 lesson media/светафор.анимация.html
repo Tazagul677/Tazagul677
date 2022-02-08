@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .number{
+        color: white;
+        font-size: 100px;
+        position: relative;
+        top: 50px;
+        left: 35%;
+
+        }
+        .w{
+            border: 1px solid black;
+            width: 200px;
+            height: 600px;
+            background-color: black;
+            border-radius: 5px;
+            display: inline-block;
+            position: relative;
+            left: 500px;
+           }
+        .a{
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            background-color: red;
+            animation-name: ref ;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            
+
+
+        }
+         @keyframes ref{
+            5% {
+                background-color: red;
+                box-shadow: red;box-shadow: 0px 0px 20px red;
+            }
+            50%{
+                background-color: white;
+                box-shadow: 0px 0px 20px white;
+            }
+            100%{
+                background-color:white;
+                box-shadow: 0px 0px 25px white;
+            }
+        }
+         .b{
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            background-color: green;
+            animation-name: gr ;
+            animation-duration: 3s;
+            animation-iteration-count: infinite; 
+         } 
+
+         @keyframes gr{
+            0% {
+              background-color: white;
+            }
+            50%{
+                background-color: yellow;
+                box-shadow: 0px 0px 20px yellow; 
+            }
+            100%{
+                background-color: white;
+            }
+        }   
+
+         .c{
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            background-color: yellow;
+            animation-name: yel ;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+             }
+             @keyframes yel{
+            0% {
+        
+                background-color: white;
+            }
+            50%{
+                background-color: white;
+                box-shadow: 0px 0px 25px white;
+            }
+            100%{
+                background-color:green;
+                box-shadow: 0px 0px 20px green;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="w">
+        <div class="a"></div>
+        <div class="b"><span class="number"></span></div>
+        <div class="c"></div>
+    </div>
+    <!-- <script>
+
+let text = 10;
+
+setInterval(() => {
+ document.body.children[0].children[1].children[0].innerHTML = text 
+    let p = document.body.style;
+         if (text<=10 && text>=7) {
+             p.backgroundColor = "red"
+         } else if (text <= 6 && text >= 4){
+             p. backgroundColor = "green"
+          } else if (text <=3 && text >= 1){
+             p.backgroundColor = " yellow"
+          } else{
+             p. backgroundColor = "purple"
+          }
+        
+     text--;
+     if (text == 0 ) {
+         text = 10; 
+     } 
+ }, 400);
+
+    </script> -->
+</body>
+</html>
